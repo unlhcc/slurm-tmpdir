@@ -23,8 +23,8 @@ Private tmp directories for Slurm
 
 %install
 rm -rf $RPM_BUILD_ROOT
-mkdir -p %{_sysconfdir}/slurm/lua.d/
-cp src/tmpdir.lua %{_sysconfdir}/slurm/lua.d/tmpdir.lua
+mkdir -p $RPM_BUILD_ROOT/%{_sysconfdir}/slurm/lua.d/
+cp src/tmpdir.lua $RPM_BUILD_ROOT/%{_sysconfdir}/slurm/lua.d/tmpdir.lua
 
 %clean
 rm -rf $RPM_BUILD_ROOT

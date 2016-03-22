@@ -1,6 +1,6 @@
 Name:           slurm-tmpdir
 Version:        1.0
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Private tmp directories for Slurm
 
 Group:          Applications/System
@@ -11,6 +11,7 @@ Source0:        %{name}-%{version}.tar.gz
 Requires:       slurm
 Requires:       lua
 Requires:       lua-linuxsys
+Requires:       slurm-plugins-lua
 
 %description
 Private tmp directories for Slurm
@@ -37,6 +38,9 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Tue Mar 22 2016 Derek Weitzel <djw8605@gmail.com> - 1.0-2
+- Adding slurm-plugins-lua as dependency
+
 * Tue Mar 22 2016 Derek Weitzel <djw8605@gmail.com> - 1.0-1
 - Initial creation of RPM
 
